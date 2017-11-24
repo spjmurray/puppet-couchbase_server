@@ -1,0 +1,12 @@
+*~
+*.swp
+*.orig
+*.rej
+Gemfile.lock
+tags
+log
+pkg
+.bundle
+vendor
+coverage
+spec/fixtures
