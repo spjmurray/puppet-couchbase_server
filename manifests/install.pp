@@ -34,7 +34,8 @@ class couchbase_server::install {
   $_url = "${_host}${_path}${_file}"
 
   # TODO: An actual supported apt/yum repository is more devops...
-  file { $_local_file:
+  file { 'couchbase-server':
+    path   => $_local_file,
     source => $_url,
     owner  => 'root',
     group  => 'root',
