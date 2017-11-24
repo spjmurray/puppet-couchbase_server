@@ -7,12 +7,13 @@ class couchbase_server::install {
   $_host = $::couchbase_server::packages
   $_path = "/releases/${::couchbase_server::version}/"
 
+  $_os_family = $facts['os']['family']
   $_os_name = downcase($facts['os']['name'])
   $_os_version = $facts['os']['release']['full']
 
   ensure_packages('curl')
 
-  case $facts['os']['family'] {
+  case $_os_family {
     'Debian': {
       $_file = "couchbase-server-enterprise_${::couchbase_server::version}-${_os_name}${_os_version}_amd64.deb"
       $_provider = 'dpkg'
@@ -21,6 +22,10 @@ class couchbase_server::install {
     'RedHat': {
       $_file = "couchbase-server-enterprise-${::couchbase_server::version}-${_os_name}${_os_version}.x86_64.rpm"
       $_provider = 'rpm'
+    }
+
+    default: {
+      fatal("Unsupported OS family \"${_os_family}\"")
     }
   }
 
