@@ -1,0 +1,23 @@
+
+AllCops:
+  Exclude:
+    # Ignore HTML related things
+    - '**/*.erb'
+    # Ignore code from test fixtures
+    - 'spec/fixtures/**/*'
+    # Ignore packaging
+    - 'pkg/**/*'
+    # Ignore bundler
+    - 'vendor/**/*'
+
+Style/HashSyntax:
+  Enabled: false
+
+Layout/IndentArray:
+    EnforcedStyle: consistent
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false

@@ -94,7 +94,6 @@ describe 'couchbase_server', :type => :class do
       end
     end
   end
-  
 end
 
 # vi: ts=2 et:
