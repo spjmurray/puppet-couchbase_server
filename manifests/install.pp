@@ -11,8 +11,6 @@ class couchbase_server::install {
   $_os_name = downcase($facts['os']['name'])
   $_os_version = $facts['os']['release']['full']
 
-  ensure_packages('curl')
-
   case $_os_family {
     'Debian': {
       $_file = "couchbase-server-enterprise_${::couchbase_server::version}-${_os_name}${_os_version}_amd64.deb"
