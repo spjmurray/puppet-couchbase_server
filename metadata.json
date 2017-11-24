@@ -2,7 +2,7 @@
   "name": "puppet-couchbase_server",
   "version": "0.0.1",
   "author": "Simon Murray",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "summary": "Couchbase Server Orchestration",
   "source": "https://github.com/spjmurray/puppet-couchbase_server",
   "project_page": "https://github.com/spjmurray/puppet-couchbase_server",
