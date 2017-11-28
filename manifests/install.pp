@@ -40,7 +40,7 @@ class couchbase_server::install {
     mode   => '0644',
   } ->
 
-  package { 'couchbase-server-enterprise':
+  package { 'couchbase-server':
     source   => $_local_file,
     provider => $_provider,
   }

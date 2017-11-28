@@ -5,3 +5,7 @@
 ## Overview
 
 Deploys and configures Couchbase Server
+
+## Dependencies
+
+* puppetlabs/stdlib

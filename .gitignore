@@ -2,11 +2,13 @@
 *.swp
 *.orig
 *.rej
+*.log
+.bundle
+.vagrant
 Gemfile.lock
 tags
 log
 pkg
-.bundle
 vendor
 coverage
 spec/fixtures

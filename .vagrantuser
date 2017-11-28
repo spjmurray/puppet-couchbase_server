@@ -1,0 +1,21 @@
+---
+# Controls which box to download from Vagrant cloud
+# Platform specific options are handled via Puppet
+#
+# Supported platforms:
+# * Ubuntu 16.04
+os:
+  dist: 'ubuntu'
+  release: '16.04'
+
+# Global hiera overrides
+# Here is the place to set custom package hosts and paths
+hiera: []
+
+# Hosts to provision with Vagrant/Puppet
+hosts:
+  couchbase0: {}
+#  couchbase1: {}
+#  couchbase2: {}
+
+# vi: ts=2 et syntax=yaml:
